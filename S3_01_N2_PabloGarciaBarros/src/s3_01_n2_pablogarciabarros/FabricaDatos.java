@@ -1,5 +1,7 @@
 package s3_01_n2_pablogarciabarros;
 
+//Con esta clase creo el objeto necesario en base al ingreso
+
 public class FabricaDatos extends AbstractFactory {
 	
 	@Override
@@ -19,4 +21,5 @@ public class FabricaDatos extends AbstractFactory {
 		}
 	}
 }
+
 

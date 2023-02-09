@@ -7,7 +7,6 @@ public class Contacto implements Dato{
 	public ArrayList<String> contacto;
 	
 	public Contacto() {
-		System.out.println("Se crea un array con el contacto");
 		this.contacto = new ArrayList<String>();
 	}
 	

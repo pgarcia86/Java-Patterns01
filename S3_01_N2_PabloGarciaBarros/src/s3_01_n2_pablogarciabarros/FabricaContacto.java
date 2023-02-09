@@ -1,5 +1,7 @@
 package s3_01_n2_pablogarciabarros;
 
+//Creo el objeto del tipo Contacto.
+
 public class FabricaContacto extends AbstractFactory{
 	
 	public Dato TipoDeDato(int nuevo) {
@@ -8,6 +10,6 @@ public class FabricaContacto extends AbstractFactory{
 			return new Contacto();
 		}
 		return null;
-	}
-	
+	}	
 }
+
