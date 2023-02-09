@@ -7,10 +7,13 @@ public class Undo<T> {
 	public static Undo instancia;
 	private ArrayList<T> comandos;
 
+	//Por el patron Singletone se declara el constructor como privado para acceder a el desde la propia clase
+	//con esto se evita que se cree mas de un objeto
 	private Undo() {		
 		this.comandos = new ArrayList<T>();		
 	}
 	
+	//se accede al constructor desde este metodo donde si el objeto es null (no ha sido creado), invoca al constructor
 	public static Undo getInstancia() {
 		if(instancia == null) {
 			instancia = new Undo();
