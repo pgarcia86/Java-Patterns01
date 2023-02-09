@@ -14,11 +14,7 @@ public class Direccion implements Dato{
 		this.direccion = entrada.nextLine();
 	}
 	
-	public String getDireccion() {
-		return this.direccion;
-	}
-	
-	public String toString() {
+	public String getDato() {
 		return this.direccion;
 	}
 }

@@ -11,15 +11,10 @@ public class Telefono implements Dato{
 	@Override
 	public void ingresarDato() {
 		System.out.println("Ingrese el numero de telefono");
-		entrada.next();
 		this.telefono = entrada.nextLine();
 	}
-	
-	public String getTelefono() {
-		return this.telefono;
-	}
-	
-	public String toString() {
+
+	public String getDato() {
 		return this.telefono;
 	}
 }

@@ -4,15 +4,20 @@ import java.util.ArrayList;
 
 public class Contacto implements Dato{
 	
-	public ArrayList<Object> contacto;
+	public ArrayList<String> contacto;
 	
-	public void ingresarDato() {
+	public Contacto() {
 		System.out.println("Se crea un array con el contacto");
-		this.contacto = new ArrayList<Object>();
+		this.contacto = new ArrayList<String>();
 	}
 	
-	public ArrayList<Object> getContacto(){
+	public void ingresarDato() {}
+	
+	public ArrayList<String> getContacto(){
 		return this.contacto;
 	}
-
+	
+	public String getDato() {
+		return "";
+	}
 }

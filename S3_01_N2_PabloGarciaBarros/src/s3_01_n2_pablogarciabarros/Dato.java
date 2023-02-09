@@ -4,6 +4,6 @@ public interface Dato {
 	
 	void ingresarDato();
 	
-	String toString();
+	String getDato();
 
 }

@@ -14,11 +14,7 @@ public class Nombre implements Dato{
 		this.nombre = entrada.nextLine();
 	}
 	
-	public String getNombre() {
-		return this.nombre;
-	}
-	
-	public String toString() {
+	public String getDato() {
 		return this.nombre;
 	}
 }

@@ -7,7 +7,7 @@ public class main {
 		
 		AbstractFactory fabricaContacto = ProductoraFabricas.getFabrica(true);
 		
-		Contacto contacto = (Contacto) fabricaContacto.TipoDeDato(1);
+		Contacto contactoNuevo = (Contacto) fabricaContacto.TipoDeDato(1);
 		
 		AbstractFactory fabricaDatos = ProductoraFabricas.getFabrica(false);
 		
@@ -18,7 +18,11 @@ public class main {
 		Dato dato3 = fabricaDatos.TipoDeDato(4);
 		dato3.ingresarDato();
 		
-		System.out.println(contacto.getContacto());
+		contactoNuevo.getContacto().add(dato1.getDato());
+		contactoNuevo.getContacto().add(dato2.getDato());
+		contactoNuevo.getContacto().add(dato3.getDato());		
+		
+		System.out.println(contactoNuevo.getContacto());
 	}
 }
 
