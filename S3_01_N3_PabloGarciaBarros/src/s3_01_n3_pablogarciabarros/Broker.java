@@ -5,16 +5,17 @@ import java.util.List;
 
 public class Broker {
 	
-	private List<Orden> listaOrdenes = new ArrayList<Orden>();
+	private List<Orden> listaOrden = new ArrayList<Orden>();
 	
-	public void recibirOrden(Orden orden) {
-		listaOrdenes.add(orden);
+	public void tomarOrden(Orden orden) {
+		listaOrden.add(orden);
 	}
 	
 	public void ejecutarOrden() {
-		for(Orden o : listaOrdenes) {
-			o.ejecutar(1);
+		for (Orden orden : listaOrden) {
+			orden.ejecutar();
 		}
-		listaOrdenes.clear();
+		listaOrden.clear();
 	}
+
 }

@@ -21,5 +21,9 @@ public class FabricaVehiculo extends FabricaAbstracta{
 			return null;
 		}
 	}
-
+	
+	public Movimiento tipoMovimiento(int tipoMovimiento, Vehiculo vehiculo) {
+		return null;
+	}
 }
+
