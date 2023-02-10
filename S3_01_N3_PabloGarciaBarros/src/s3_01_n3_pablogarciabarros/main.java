@@ -10,40 +10,45 @@ public class main {
 		//Creo una fabrica abstracta de vehiculos
 		FabricaAbstracta fabrica = new FabricaVehiculo();
 		
+		//Creo cada uno de los vehiculos
 		Vehiculo coche = fabrica.tipoVehiculo(1);
 		Vehiculo bicicleta = fabrica.tipoVehiculo(2);
 		Vehiculo avion = fabrica.tipoVehiculo(3);
 		Vehiculo barco = fabrica.tipoVehiculo(4);
 		
 		//Creo una fabrica abstracta de Movimientos
-		FabricaAbstracta fabricaMovimiento = new FabricaMovimiento();
-		
+		FabricaAbstracta fabricaMovimiento = new FabricaMovimiento();		
+				
 		Broker broker = new Broker();
+		System.out.println("\n");
 		
 		//Ejecuto las ordenes desde la clase Broker
-		broker.tomarOrden((Orden) fabricaMovimiento.tipoMovimiento(1, coche));
-		broker.tomarOrden((Orden) fabricaMovimiento.tipoMovimiento(2, coche));
-		broker.tomarOrden((Orden) fabricaMovimiento.tipoMovimiento(3, coche));
+		broker.tomarMovimiento((Mover) fabricaMovimiento.tipoMovimiento(1, coche));
+		broker.tomarMovimiento((Mover) fabricaMovimiento.tipoMovimiento(2, coche));
+		broker.tomarMovimiento((Mover) fabricaMovimiento.tipoMovimiento(3, coche));
 		
-		broker.ejecutarOrden();
+		broker.ejecutarMovimiento();
+		System.out.println("\n");
 		
-		broker.tomarOrden((Orden) fabricaMovimiento.tipoMovimiento(1, avion));
-		broker.tomarOrden((Orden) fabricaMovimiento.tipoMovimiento(2, avion));
-		broker.tomarOrden((Orden) fabricaMovimiento.tipoMovimiento(3, avion));
+		broker.tomarMovimiento((Mover) fabricaMovimiento.tipoMovimiento(1, avion));
+		broker.tomarMovimiento((Mover) fabricaMovimiento.tipoMovimiento(2, avion));
+		broker.tomarMovimiento((Mover) fabricaMovimiento.tipoMovimiento(3, avion));
 		
-		broker.ejecutarOrden();
+		broker.ejecutarMovimiento();
+		System.out.println("\n");
 		
-		broker.tomarOrden((Orden) fabricaMovimiento.tipoMovimiento(1, barco));
-		broker.tomarOrden((Orden) fabricaMovimiento.tipoMovimiento(2, barco));
-		broker.tomarOrden((Orden) fabricaMovimiento.tipoMovimiento(3, barco));
+		broker.tomarMovimiento((Mover) fabricaMovimiento.tipoMovimiento(1, barco));
+		broker.tomarMovimiento((Mover) fabricaMovimiento.tipoMovimiento(2, barco));
+		broker.tomarMovimiento((Mover) fabricaMovimiento.tipoMovimiento(3, barco));
 		
-		broker.ejecutarOrden();
+		broker.ejecutarMovimiento();
+		System.out.println("\n");
 		
-		broker.tomarOrden((Orden) fabricaMovimiento.tipoMovimiento(1, bicicleta));
-		broker.tomarOrden((Orden) fabricaMovimiento.tipoMovimiento(2, bicicleta));
-		broker.tomarOrden((Orden) fabricaMovimiento.tipoMovimiento(3, bicicleta));
+		broker.tomarMovimiento((Mover) fabricaMovimiento.tipoMovimiento(1, bicicleta));
+		broker.tomarMovimiento((Mover) fabricaMovimiento.tipoMovimiento(2, bicicleta));
+		broker.tomarMovimiento((Mover) fabricaMovimiento.tipoMovimiento(3, bicicleta));
 		
-		broker.ejecutarOrden();
+		broker.ejecutarMovimiento();
 	}
 }
 

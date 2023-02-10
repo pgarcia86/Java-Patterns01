@@ -1,6 +1,6 @@
 package s3_01_n3_pablogarciabarros;
 
-public class Arrancar implements Orden, Movimiento{
+public class Arrancar implements Mover, Movimiento{
 	
 	private Vehiculo vehiculo;
 	
@@ -12,5 +12,6 @@ public class Arrancar implements Orden, Movimiento{
 	public void ejecutar() {
 		vehiculo.arrancar();
 	}
+
 
 }
